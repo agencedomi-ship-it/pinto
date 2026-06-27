@@ -2,7 +2,7 @@
 # This file is used by Wrangler CLI for deployment
 # The build target is already set to Cloudflare in vite.config.ts via @lovable.dev/vite-tanstack-config
 
-name = "mr-pinto-serrurier"
+name = "mpinto"
 main = ".output/server/index.mjs"
 compatibility_date = "2025-06-01"
 
