@@ -1,0 +1,18 @@
+# Cloudflare Workers : serveur TanStack Start (SSR) + fichiers statiques.
+# « npx wrangler deploy » suffit : la section [build] construit le site avant l'envoi.
+
+name = "pinto2"
+main = ".output/server/index.mjs"
+compatibility_date = "2025-06-01"
+compatibility_flags = ["nodejs_compat"]
+
+[build]
+command = "npm run build"
+
+# Fichiers statiques produits par le build (CSS, polices, logo, favicons) : servis directement par Cloudflare.
+[assets]
+directory = ".output/public"
+binding = "ASSETS"
+
+[observability]
+enabled = true
